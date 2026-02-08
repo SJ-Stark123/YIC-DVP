@@ -1,0 +1,455 @@
+{
+  "entities": {
+    "Project": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Project",
+      "type": "object",
+      "description": "Represents a project showcased on the Innovators Hub website.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the project."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the project."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the project."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL of the image representing the project.",
+          "format": "uri"
+        },
+        "detailsUrl": {
+          "type": "string",
+          "description": "URL to the detailed view of the project.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "imageUrl",
+        "detailsUrl"
+      ]
+    },
+    "TeamMember": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "TeamMember",
+      "type": "object",
+      "description": "Represents a team member (leadership) of the Young Innovators Club.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the team member."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the team member."
+        },
+        "role": {
+          "type": "string",
+          "description": "The role of the team member in the club."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL of the team member's profile picture.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "role"
+      ]
+    },
+    "Event": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Event",
+      "type": "object",
+      "description": "Represents an event organized or scheduled by the Young Innovators Club.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the event."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the event."
+        },
+        "date": {
+          "type": "string",
+          "description": "The date of the event.",
+          "format": "date-time"
+        },
+        "time": {
+          "type": "string",
+          "description": "The time of the event."
+        },
+        "location": {
+          "type": "string",
+          "description": "The location of the event."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the event."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "date",
+        "time",
+        "location"
+      ]
+    },
+    "GalleryItem": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "GalleryItem",
+      "type": "object",
+      "description": "Represents an image or media item in the innovation gallery.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the gallery item."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title or caption of the gallery item."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL of the image in the gallery.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "imageUrl"
+      ]
+    },
+    "Tutorial": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Tutorial",
+      "type": "object",
+      "description": "Represents a tutorial for learning.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the tutorial."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the tutorial."
+        },
+        "description": {
+          "type": "string",
+          "description": "A short description of the tutorial."
+        },
+        "longDescription": {
+          "type": "string",
+          "description": "A more detailed description of the tutorial."
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "Beginner",
+            "Intermediate",
+            "Advanced"
+          ]
+        },
+        "imageUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "imageHint": {
+          "type": "string"
+        },
+        "videoUrl": {
+          "type": "string",
+          "description": "URL to the video tutorial (e.g., YouTube embed URL).",
+          "format": "uri"
+        },
+        "blueprintUrl": {
+          "type": "string",
+          "description": "URL to the project blueprint or schematics.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "category",
+        "imageUrl"
+      ]
+    },
+    "Subscriber": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Subscriber",
+      "type": "object",
+      "description": "Represents a subscriber to the newsletter.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the subscriber."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address of the subscriber.",
+          "format": "email"
+        },
+        "subscribedAt": {
+          "type": "string",
+          "description": "Timestamp of when the user subscribed.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "subscribedAt"
+      ]
+    },
+    "ContactFormSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactFormSubmission",
+      "type": "object",
+      "description": "Represents a submission from the contact form.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the contact form submission."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the person submitting the form."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address of the person submitting the form.",
+          "format": "email"
+        },
+        "message": {
+          "type": "string",
+          "description": "The message content from the form."
+        },
+        "submittedAt": {
+          "type": "string",
+          "description": "Timestamp of when the form was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "message",
+        "submittedAt"
+      ]
+    },
+    "EnrollmentFormSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "EnrollmentFormSubmission",
+      "type": "object",
+      "description": "Represents a submission from the enrollment form.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the enrollment form submission."
+        },
+        "fullName": {
+          "type": "string",
+          "description": "The full name of the person submitting the form."
+        },
+        "gradeClass": {
+          "type": "string",
+          "description": "The grade or class of the person submitting the form."
+        },
+        "emailAddress": {
+          "type": "string",
+          "description": "The email address of the person submitting the form.",
+          "format": "email"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "The phone number of the person submitting the form."
+        },
+        "interestArea": {
+          "type": "string",
+          "description": "The area of interest selected by the person submitting the form."
+        },
+        "reasonForJoining": {
+          "type": "string",
+          "description": "The reason for joining provided by the person submitting the form."
+        },
+        "consentGiven": {
+          "type": "boolean",
+          "description": "Indicates whether consent was given by the person submitting the form."
+        },
+        "submittedAt": {
+          "type": "string",
+          "description": "Timestamp of when the form was submitted.",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the enrollment application.",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "fullName",
+        "gradeClass",
+        "emailAddress",
+        "phoneNumber",
+        "interestArea",
+        "reasonForJoining",
+        "consentGiven",
+        "submittedAt",
+        "status"
+      ]
+    },
+    "Member": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Member",
+      "type": "object",
+      "description": "Represents an approved club member.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the member."
+        },
+        "fullName": {
+          "type": "string"
+        },
+        "gradeClass": {
+          "type": "string"
+        },
+        "emailAddress": {
+          "type": "string",
+          "format": "email"
+        },
+        "interestArea": {
+          "type": "string"
+        },
+        "applicationId": {
+          "type": "string"
+        },
+        "joinedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "fullName",
+        "emailAddress",
+        "applicationId",
+        "joinedAt"
+      ]
+    },
+    "AdminAccess": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "AdminAccess",
+      "type": "object",
+      "description": "Represents a user with administrative access. The document ID should be the user's UID.",
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "The administrative role.",
+          "enum": [
+            "Top Board"
+          ]
+        },
+        "grantedAt": {
+          "type": "string",
+          "description": "Timestamp of when the access was granted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "role",
+        "grantedAt"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "/projects/{projectId}": {
+      "schema": {
+        "$ref": "#/entities/Project"
+      },
+      "description": "Stores project information. Publicly accessible."
+    },
+    "/team_members/{teamMemberId}": {
+      "schema": {
+        "$ref": "#/entities/TeamMember"
+      },
+      "description": "Stores team member profiles. Publicly accessible."
+    },
+    "/events/{eventId}": {
+      "schema": {
+        "$ref": "#/entities/Event"
+      },
+      "description": "Stores event details. Publicly accessible."
+    },
+    "/gallery_items/{galleryItemId}": {
+      "schema": {
+        "$ref": "#/entities/GalleryItem"
+      },
+      "description": "Stores gallery images and associated data. Publicly accessible."
+    },
+    "/tutorials/{tutorialId}": {
+      "schema": {
+        "$ref": "#/entities/Tutorial"
+      },
+      "description": "Stores tutorials. Publicly readable, admin writable."
+    },
+    "/subscribers/{subscriberId}": {
+      "schema": {
+        "$ref": "#/entities/Subscriber"
+      },
+      "description": "Stores newsletter subscriber information. Accessible by admins only."
+    },
+    "/contact_form_submissions/{submissionId}": {
+      "schema": {
+        "$ref": "#/entities/ContactFormSubmission"
+      },
+      "description": "Stores contact form submissions. Accessible by admins only."
+    },
+    "/applications/{applicationId}": {
+      "schema": {
+        "$ref": "#/entities/EnrollmentFormSubmission"
+      },
+      "description": "Stores enrollment form submissions. Accessible by admins only."
+    },
+    "/yic_members_details/{memberId}": {
+      "schema": {
+        "$ref": "#/entities/Member"
+      },
+      "description": "Stores approved club members. Accessible by admins only."
+    },
+    "/admin_access/{userId}": {
+      "schema": {
+        "$ref": "#/entities/AdminAccess"
+      },
+      "description": "Stores users who have admin access to the dashboard. Access is manually granted in the Firebase console. Only other admins can read or write to this collection."
+    }
+  }
+}

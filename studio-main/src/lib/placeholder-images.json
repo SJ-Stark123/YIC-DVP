@@ -1,0 +1,136 @@
+{
+  "placeholderImages": [
+    {
+      "id": "team-javitha",
+      "description": "Javitha Senon, President",
+      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwMzEwMjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-shaleesha",
+      "description": "Shaleesha Hansamal, Vice President",
+      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwMzEwMjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-senul",
+      "description": "Senul Yalegama, Editor",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwMzEwMjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-sahan",
+      "description": "Sahan Nevinda, Secretary",
+      "imageUrl": "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwMzEwMjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-wethuja",
+      "description": "Wethuja Anuhas, Editor",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwMzEwMjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-sithija",
+      "description": "Sithija Pehesara, Project Director",
+      "imageUrl": "https://images.unsplash.com/photo-1715423058726-ddea1ec51b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwMzEwMjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-senuka",
+      "description": "Senuka Biman, Director Of Media",
+      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwMzEwMjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "project-1",
+      "description": "AI Powered Drone",
+      "imageUrl": "https://images.unsplash.com/photo-1599568845941-9cf49acd70ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZHJvbmUlMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc3MDM4MTgzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "drone technology"
+    },
+    {
+      "id": "project-2",
+      "description": "Smart Home Automation",
+      "imageUrl": "https://images.unsplash.com/photo-1703675858673-56aab77ccbec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzbWFydCUyMGhvbWV8ZW58MHx8fHwxNzcwMzgxODM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart home"
+    },
+    {
+      "id": "project-3",
+      "description": "Eco-Friendly Water Filter",
+      "imageUrl": "https://images.unsplash.com/photo-1510148567806-766658eb5b86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3YXRlciUyMGZpbHRlcnxlbnwwfHx8fDE3NzAzNTY2ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "water filter"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Students collaborating on a robotics project",
+      "imageUrl": "https://images.unsplash.com/photo-1742767069929-0c663150b164?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkZW50cyUyMHJvYm90aWNzfGVufDB8fHx8MTc3MDM4MTgzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students robotics"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Winning an award at the science fair",
+      "imageUrl": "https://images.unsplash.com/photo-1594122230689-45899d9e6f69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhd2FyZCUyMGNlcmVtb255fGVufDB8fHx8MTc3MDM4MTgzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "award ceremony"
+    },
+    {
+      "id": "gallery-3",
+      "description": "A 3D printing session in progress",
+      "imageUrl": "https://images.unsplash.com/photo-1642969164999-979483e21601?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHwzZCUyMHByaW50aW5nfGVufDB8fHx8MTc3MDM4MTgzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "3d printing"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Club members at a workshop",
+      "imageUrl": "https://images.unsplash.com/photo-1642252429939-3f9232959eb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkZW50JTIwd29ya3Nob3B8ZW58MHx8fHwxNzcwMzgxODM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student workshop"
+    },
+    {
+      "id": "gallery-5",
+      "description": "A finished solar-powered car model",
+      "imageUrl": "https://images.unsplash.com/photo-1716281426632-34547e833852?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2xhciUyMGNhcnxlbnwwfHx8fDE3NzAzODE4MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar car"
+    },
+    {
+      "id": "gallery-6",
+      "description": "Presentation day at the club",
+      "imageUrl": "https://images.unsplash.com/photo-1765020553499-1ec9aeb21298?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkZW50JTIwcHJlc2VudGF0aW9ufGVufDB8fHx8MTc3MDMwODU4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student presentation"
+    },
+    {
+      "id": "learn-arduino-basics",
+      "description": "Arduino getting started guide",
+      "imageUrl": "https://images.unsplash.com/photo-1586920740142-346aea2a2124?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcmR1aW5vJTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNzcwMzgyNDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "arduino electronics"
+    },
+    {
+      "id": "learn-led-blink",
+      "description": "Learn to blink an LED with Arduino",
+      "imageUrl": "https://images.unsplash.com/photo-1577976655502-85300c5ca2cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcmR1aW5vJTIwbGVkfGVufDB8fHx8MTc3MDM4MjQ3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "arduino led"
+    },
+    {
+      "id": "learn-sensors",
+      "description": "Using sensors with Arduino",
+      "imageUrl": "https://images.unsplash.com/photo-1682971829405-42b40b5f0895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcmR1aW5vJTIwc2Vuc29yfGVufDB8fHx8MTc3MDM4MjQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "arduino sensor"
+    },
+    {
+      "id": "learn-motors",
+      "description": "Controlling Motors",
+      "imageUrl": "https://images.unsplash.com/photo-1682971829405-42b40b5f0895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhcmR1aW5vJTIwbW90b3J8ZW58MHx8fHwxNzcwMzgyNDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "arduino motor"
+    },
+    {
+      "id": "learn-iot",
+      "description": "Arduino IoT Cloud",
+      "imageUrl": "https://images.unsplash.com/photo-1682971829405-42b40b5f0895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcmR1aW5vJTIwaW90fGVufDB8fHx8MTc3MDM4MjQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "arduino iot"
+    },
+    {
+      "id": "learn-bt",
+      "description": "Bluetooth Communication",
+      "imageUrl": "https://images.unsplash.com/photo-1682971829405-42b40b5f0895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcmR1aW5vJTIwYmx1ZXRvb3RofGVufDB8fHx8MTc3MDM4MjQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "arduino bluetooth"
+    }
+  ]
+}

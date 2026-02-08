@@ -1,0 +1,159 @@
+
+/**
+ * This ruleset establishes a security model for the Young Innovators Club website,
+ * which primarily serves as a public-facing content hub with private data
+ * submission capabilities.
+ *
+ * Core Philosophy:
+ * The model strictly separates public content from private user submissions. Public
+ * collections are globally readable, but writable only by authenticated admin
+ * users to protect data integrity. Private collections for form submissions
+ * operate as "write-only mailboxes" for the public, allowing anyone to submit
+ * data, but restricting read access to admins to ensure privacy.
+ *
+ * Data Structure:
+ * The data structure is flat, with each data type residing in its own top-level
+ * collection. This segregation simplifies security rules, as all documents
+ * within a collection share the same access control profile.
+ *
+ * Key Security Decisions:
+ * - Public Content is Admin-Writable: Collections like 'projects', 'events',
+ *   'team_members', 'gallery_items', and 'tutorials' are readable by anyone but
+ *   can only be modified by authenticated users (admins). This prevents
+ *   vandalism while allows content management.
+ * - Submissions are Private Mailboxes with Admin Read: Collections for form
+ *   submissions ('subscribers', 'contact_form_submissions',
+ *   'applications') are designed to protect user privacy. Any
+ *   user can create a document, but only authenticated users can read, update,
+
+ *   or delete that data.
+ *
+ * Denormalization for Authorization:
+ * This ruleset does not currently require denormalization as there are no
+ * user-specific ownership or collaborative features. Access is determined at the
+ * collection level (public vs. private mailbox) and user authentication status.
+ *
+ * Structural Segregation:
+ * The data model effectively uses structural segregation. Publicly visible
+ * information (like projects) is stored separately from sensitive, private
+ * information (like enrollment form submissions), which is a best practice for
+ * secure and performant rules.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper Functions
+    // =================================
+
+    /**
+     * @description Checks if a user is authenticated.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * @description Checks if the signed-in user is an admin.
+     * Admin status is determined by the existence of a document in the
+     * 'admin_access' collection with the user's UID as the document ID.
+     */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/admin_access/$(request.auth.uid));
+    }
+
+
+    // Public Content Collections (Admin Writable)
+    // =================================
+
+    match /projects/{projectId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /team_members/{teamMemberId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /events/{eventId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /gallery_items/{galleryItemId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /tutorials/{tutorialId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+
+    // Private Mailbox Collections (Admin Readable)
+    // =================================
+
+    /**
+     * @description Defines rules for the 'subscribers' collection.
+     * @path        /subscribers/{subscriberId}
+     * @allow       (create) An anonymous user subscribes to the newsletter.
+     * @allow       (read, update, delete) An admin user can manage subscriber data.
+     * @principle   Implements a private "write-only mailbox" to protect PII, with full management access for admins.
+     */
+    match /subscribers/{subscriberId} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Defines rules for the 'contact_form_submissions' collection.
+     * @path        /contact_form_submissions/{submissionId}
+     * @allow       (create) An anonymous user submits the contact form.
+     * @allow       (read, update, delete) An admin user can manage submission data.
+     * @principle   Implements a private "write-only mailbox" to protect PII, with full management access for admins.
+     */
+    match /contact_form_submissions/{submissionId} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Defines rules for the 'applications' collection (formerly enrollment_form_submissions).
+     * @path        /applications/{applicationId}
+     * @allow       (create) An anonymous user submits an application form.
+     * @allow       (read, update, delete) An admin user can manage application data.
+     * @principle   Implements a private "write-only mailbox" to protect PII, with full management access for admins.
+     */
+    match /applications/{applicationId} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Defines rules for the 'yic_members_details' collection.
+     * @path        /yic_members_details/{memberId}
+     * @allow       (read, write) An admin user can manage member data.
+     * @principle   Grants full control over member records to admins.
+     */
+    match /yic_members_details/{memberId} {
+        allow read, write: if isAdmin();
+    }
+
+    /**
+     * @description Defines rules for the 'admin_access' collection.
+     * @path        /admin_access/{userId}
+     * @allow       (get) A signed-in user can ONLY check their own admin status. This is crucial for the client-side check.
+     * @allow       (list, write) An admin can manage other admins.
+     * @principle   This rule secures admin access. The `get` rule is explicitly
+     *              limited to a user checking their own document to enable the client-side
+     *              check while the `isAdmin()` function (which requires a `get` itself) can
+     *              secure the `list` operation for all other users.
+     */
+    match /admin_access/{userId} {
+      allow get: if isSignedIn() && request.auth.uid == userId;
+      allow list, write: if isAdmin();
+    }
+  }
+}
